@@ -1,22 +1,17 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import React from 'react';
+import { Container, Navbar, Nav, Row } from 'react-bootstrap';
 
 function CustomerHeader() {
   return (
     <header>
-      <Navbar bg="primary" expand="lg">
+      <Navbar bg="primary" variant='dark' expand="lg" collapseOnSelect >
         <Container>
-          <Navbar.Brand href="#home">QuickApp</Navbar.Brand>
+          <Navbar.Brand href="/">Quick</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
-              <Nav.Link href="#home">Products</Nav.Link>
-              <Nav.Link href="#orders">Orders</Nav.Link>
-              <Nav.Link href="#orders">Orders</Nav.Link>
-              <Nav.Link href="#orders">Orders</Nav.Link>
-              <Nav.Link href="#orders">Orders</Nav.Link>
+          <Navbar.Collapse id="basic-navbar-nav" class="navbar-nav ml-auto">
+            <Nav className="ml-auto">
+              <Nav.Link href="/cart"><i className='fas fa-shopping-cart'></i> Cart</Nav.Link>
+              <Nav.Link href="/login"><i className='fas fa-user'></i> Login</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
